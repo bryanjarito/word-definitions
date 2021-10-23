@@ -6,29 +6,29 @@
                     <h3 class="mt-3">Word Definition App</h3>
                 </b-col>
             </b-row>
-            <b-row class="mb-4 mt-2 justify-content-lg-center">
+            <b-row class="mb-4 mt-2 justify-content-md-center">
                 <b-col col md="12" lg="4">
                     <b-button block variant="info" @click="getPreviousResults">Search History</b-button>
                 </b-col>
             </b-row>
-            <b-row class="justify-content-lg-center">
+            <b-row class="justify-content-md-center">
                 <b-col col md="12" lg="4">
                     <input type="text" placeholder="Enter a word" v-model="word" class="form-control" autofocus>
                 </b-col>
             </b-row>
-            <b-row class="mt-3 justify-content-lg-center">
+            <b-row class="mt-3 justify-content-md-center">
                 <b-col col md="12" lg="4">
                     <b-button block variant="primary" @click="getWordDefinitions">Get Definitions</b-button>
                 </b-col>
             </b-row>
             <div v-if="isSearchDone">
-                <b-row class="mt-3 justify-content-lg-center">
+                <b-row class="mt-3 justify-content-md-center">
                     <h3><b>Word: <i>{{searchWord}}</i></b></h3>
                 </b-row>
-                <b-row class="mt-3 justify-content-lg-center">
+                <b-row class="mt-3 justify-content-md-center">
                     <h4 v-if="definitions.length == 0">No definitions found!</h4>
                 </b-row>
-                <b-row class="justify-content-lg-center" v-if="definitions.length > 0">
+                <b-row class="justify-content-md-center" v-if="definitions.length > 0">
                     <b-col col md="10">
                         <b-table striped hover :items="definitions"></b-table>
                     </b-col>
